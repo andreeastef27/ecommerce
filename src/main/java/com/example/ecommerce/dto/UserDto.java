@@ -1,22 +1,17 @@
-package com.example.ecommerce.model;
+package com.example.ecommerce.dto;
 
-import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
 
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-@Entity
-@Getter
+@Data
 @Setter
-@Table(name = "users", schema = "public")
-public class User {
+@Getter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class UserDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
     private int userId;
 
     private String name;
